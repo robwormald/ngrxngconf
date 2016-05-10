@@ -21,5 +21,7 @@ export function todos(allTodos = [], action) {
        return todo.id === action.payload.id ?
          Object.assign({}, todo, action.payload) : todo;
      });
+    default:
+      return allTodos;
  };
 }
